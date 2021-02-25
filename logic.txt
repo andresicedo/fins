@@ -1,0 +1,47 @@
+myfin is a financial services application that provides procurement, invoicing,
+balance sheet assessment, p&l statement assessment, cashflow and budgeting 
+services.
+
+Procurement - Users will be able to create a purchse order enter order details and 
+email for approval. Once approval is complete, user can will have email, printing
+and pdf conversion capabilities for the purchase order. Each PO will be assigned a 
+unique PO number that is exclusive to the user or company name. POs history will also
+be available in the application. A PO received status will also be available, 
+allowing the user to change status of PO to sent to supplier, received, partially
+received, cancelled and paid.
+
+Invoicing - An entire companies accounts receivable can be housed in the application.
+Invoices can be generated with a unique invoice number that is exclusive to the user
+or company name. Invoice history will also be available through the application.
+When payment is received, user can mark invoice as paid and will be removed from 
+company aging on balance sheet. Invoice history will also be available. User will 
+also have the ability to send invoice via email, print and convert to pdf through
+the application.
+
+balance sheet assessment - The user will have the ability to generate a balance 
+sheet after completing a quick questionare about company or user financials. Assets 
+and liabilities will be pulled from other areas of the application, if being used.
+The user will have email, print, and pdf conversion capabilities for the balance 
+sheet feature of the application.
+
+p&l statement - The financial statement feature will also be available for users, 
+allowing for real time review on any day of the month. Revenue and expenses for 
+a given month will be generated after user answers a quick questionare about user
+or company financials. The user will have email, print, and pdf conversion 
+capabilities with the financial statement feature.
+
+cashflow - Under construction
+
+budgeting and forecasting - user will have budgeting capabilities for the following 
+month or year. Changing your budget will not be allowed after budget is submitted.
+User will be able to update forecasting for any given month, at or before the 15th 
+of the current month. budgeting and forecasting reports will be available for print,
+email, and pdf conversion.
+
+month-end - bills paid and purchase orders in received and partially received status
+will qualify as in the month expenses. Any purchse order sent to suppliers and not
+received in the month, will be rolled over to the next month.
+
+financial performance - a review of company financial performance will be available
+but currently under construction. Logic for financial performance not completed as
+of 02/24/2021.
