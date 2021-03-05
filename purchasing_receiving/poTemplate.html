@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/purchasing/poStyles.css">
+    <title>Purchasing/Receiving</title>
+</head>
+
+<body>
+    <div class="po_container active">
+        <div class="poTitle">PURCHASE ORDER</div>
+        <div class="po_detail_container">
+            <table class="addressForm">
+                <thead style="font-weight:bold">
+                    <tr>
+                        <th>TO:</th>
+                        <th>SHIPPING ADDRESS:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td contenteditable="true" style="width:50%">
+
+                        </td>
+                        <td contenteditable="true" style="width:50%">
+                            Company Name<br />
+                            ATTN: Purchaser Name<br />
+                            123 Main Street<br />
+                            Houston, TX 00000<br />
+                            Phone 000-000-0000
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <hr style="visibility:hidden" />
+
+
+            <table class="tableBorder">
+                <thead style="font-weight:bold">
+                    <tr>
+                        <th>PO NUMBER:</th>
+                        <th>ORDERED BY:</th>
+                        <th>DATE (MM/DD/YYYY):</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td contenteditable="true" style="width:33.3%">1234567890</td>
+                        <td contenteditable="true" style="width:33.3%">YOUR NAME HERE</td>
+                        <td contenteditable="true" style="width:33.3%">03/02/2021</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+            <table class="proposedWork" width="100%" style="margin-top:20px">
+                <thead>
+                    <th>QTY</th>
+                    <th>UNIT</th>
+                    <th>DESCRIPTION</th>
+                    <th>COST</th>
+                    <th class="amountColumn">TOTAL</th>
+                    <th class="docEdit trAdd">+</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td contenteditable="true">1</td>
+                        <td class="unit" contenteditable="true">10</td>
+                        <td contenteditable="true" class="description">Goods Ordered</td>
+                        <td class="amount" contenteditable="true">10</td>
+                        <td class="amount amountColumn rowTotal" contenteditable="true">0</td>
+                        <td class="docEdit tdDelete">X</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td style="border:none"></td>
+                        <td style="border:none"></td>
+                        <td style="border:none"></td>
+                        <td style="border:none;text-align:right">SUBTOTAL:</td>
+                        <td class="amount subtotal">0.00</td>
+                        <td class="docEdit"></td>
+                    </tr>
+                    <tr>
+                        <td style="border:none"></td>
+                        <td style="border:none"></td>
+                        <td style="border:none"></td>
+                        <td style="border:none;text-align:right">SALES TAX:</td>
+                        <td class="amount" contenteditable="true">0.00</td>
+                        <td class="docEdit"></td>
+                    </tr>
+                    <tr>
+                        <td style="border:none"></td>
+                        <td style="border:none"></td>
+                        <td style="border:none"></td>
+                        <td style="border:none;text-align:right;white-space:nowrap">SHIPPING & HANDLING:</td>
+                        <td class="amount" contenteditable="true">0.00</td>
+                        <td class="docEdit"></td>
+                    </tr>
+                    <tr>
+                        <td style="border:none"></td>
+                        <td style="border:none"></td>
+                        <td style="border:none"></td>
+                        <td style="border:none;text-align:right">TOTAL:</td>
+                        <td class="total amount" contenteditable="true"">0.00</td>
+              <td class=" docEdit"></td>
+                    </tr>
+                </tfoot>
+            </table>
+
+
+
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td style="50%" style="vertical-align:top">
+                            <table style="width:100%">
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align:left">
+                                            <p>1. Please send two copies of your invoice.</p>
+                                            <p>2. Enter this order in accordance with the prices, terms, delivery
+                                                method, and specifications
+                                                listed above.</p>
+                                            <p>3. Please notify us immediately if you are unable to ship as specified.
+                                            </p>
+                                            <p>4. Send all correspondence to:</p>
+                                            <p style="padding-left:20px">Apollo Painting & Wallcovering
+                                                <br />
+                                                535 N. Eucalyptus Ave.
+                                                <br />
+                                                Inglewood, CA 90302
+                                                <br />
+                                                Phone (714)326-3025
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="padding-left:40px; width:50%; vertical-align:top">
+                            <table style="width:100%">
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align:left">
+                                            <strong>COMMENTS:</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td contenteditable="true" style="text-align:left;border: 1px solid #000">Please
+                                            ship all goods to
+                                            our office using our UPS account #1234</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-top:60px">
+                                            Authorized by: _____________________________ Date: __________
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+        </div>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="/purchasing/poScript.js"></script>
+</body>
+
+</html>
