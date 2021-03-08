@@ -19,26 +19,325 @@ html,
     margin-left: 3%;
 }
 
-/* Purchasing Receiving Buttons */
-.button3 {
-    background-color: #f44336; 
-    color: white; 
-    border: 2px solid #f44336;
+/* Purchasing Receiving Cards */
+
+/* Create PO Form */
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Style for the submit button */
+.form-container .SubmitBtn {
+  background-color: #209688;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+/* Style for the preview PO button */
+.form-container .previewBtn {
+  background-color: #FB9802;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Style for the cancel button */
+.form-container .cancelBtn {
+  background-color: #F44336;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+/* PO Description Table */
+.poTable {
+  font-size: 12px;
+}
+ table{
+  width:100%;
+  margin-bottom:1em;
+  border-collapse: collapse;
+}
+ .poTable th{
+  background-color:#eee;
+}
+.tableBorder th{
+background-color:#eee;
+}
+ th,
+ tbody td{
+  padding:0.5em;
+
+}
+ tfoot td{
+  padding:0.5em;
+
+}
+ td:focus { 
+border:1px solid #fff;
+-webkit-box-shadow:inset 0px 0px 0px 2px #5292F7;
+-moz-box-shadow:inset 0px 0px 0px 2px #5292F7;
+box-shadow:inset 0px 0px 0px 2px #5292F7;
+outline: none;
+}
+ .spreadSheetTitle{ 
+font-weight: bold;
+}
+ tr td{
+text-align:center;
+}
+
+ .trAdd{
+background-color: #007bff !important;
+color:#fff;
+font-weight:800;
+cursor: pointer;
+}
+ .tdDelete{
+background-color: #eee;
+color:black;
+font-weight:800;
+cursor: pointer;
+}
+ .tdDelete:hover{
+background-color: #df5640;
+color:black;
+border-color: #ce3118;
+}
+.SubmitBtn:hover{
+  background-color: green;
+  color:black;
+  border-color: green;
   }
-  
-  .button3:hover {
-    background-color: white;
-    color: black;
+.previewBtn:hover{
+  background-color: orange;
+  color:black;
+  border-color: orange;
+  }
+.documentControls{
+text-align:right;
+}
+.spreadSheetTitle span{
+padding-right:10px;
+}
+
+.spreadSheetTitle a{
+font-weight: normal;
+padding: 0 12px;
+}
+.spreadSheetTitle a:hover, .spreadSheetTitle a:focus, .spreadSheetTitle a:active{
+text-decoration:none;
+}
+ .groupTotal{
+text-align:right;
+}
+
+table.style1 tr td:first-child{
+font-weight:bold;
+white-space:nowrap;
+text-align:right;
+}
+table.style1 tr td:last-child{
+border-bottom:1px solid #000;
+}
+
+table.poTable td,
+table.poTable th,
+table.exclusions td,
+table.exclusions th{
+border:1px solid #000;
+}
+table.poTable thead th, table.exclusions thead th{
+font-weight:bold;
+}
+table.poTable td,
+table.poTable th:first-child,
+table.exclusions th, table.exclusions td{
+text-align:left;
+vertical-align:top;
+}
+table.poTable td.description{
+width:80%;
+}
+
+table.poTable td.amountColumn, table.poTable th.amountColumn,
+table.poTable td:last-child, table.poTable th:last-child{
+text-align:center;
+vertical-align:top;
+white-space:nowrap;
+}
+
+.amount:before, .total:before{
+content: "$";
+}
+table.poTable tfoot td:first-child{
+border:none;
+text-align:right;
+}
+table.poTable tfoot tr:last-child td{
+font-size:16px;
+font-weight:bold;
+}
+
+table.style1 tr td:last-child{
+width:100%;
+}
+table.style1 td:last-child{
+text-align:left;
+}
+td.tdDelete{
+width:1%;
+}
+
+table.coResponse td{text-align:left}
+
+
+.docEdit{border:0 !important}
+
+.tableBorder td, .tableBorder th{
+border:1px solid #000;
+}
+.tableBorder th, .tableBorder td{text-align:center}
+
+table.poTable td, table.poTable th{text-align:center}
+table.poTable td.description{text-align:left}
+
+/* Vertical scrollbar for form */
+div.form-popup {
+  height: 500px;
+  overflow: scroll;
+}
+
+
+/* Vendor buttons */
+.createVendorBtn {
+  background-color: #2196F3;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+.createVendorBtn:hover{
+  background-color: #1a73bd;
+  color:black;
+  border-color: #1a73bd;
+  }
+.updateVendorBtn {
+  background-color: #209688;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+.updateVendorBtn:hover{
+  background-color: green;
+  color:black;
+  border-color: green;
   }
 
-  .button4 {
-    background-color: #2196F3; 
-    color: white; 
-    border: 2px solid #2196F3;
-  }
-  
-  .button4:hover {
-    background-color: white;
-    color: black;
+.deleteVendorBtn {
+  background-color: #FB9802;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+.deleteVendorBtn:hover{
+  background-color: orange;
+  color:black;
+  border-color: orange;
   }
 
+
+  .dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown a:hover {background-color: #ddd;}
+  
+  .show {display: block;}
